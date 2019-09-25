@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.00
+Type=Application
+Name=GTK Calculator
+GenericName=Utils
+Comment=My First created gui calculator
+Exec=/opt/gtk-calculator/executables/gtk-calculator
+Terminal=false
+Icon=/opt/gtk-calculator/design/icon.png
+Categories=Utility;
+StartupNotify=true
+StartupWMClass=Gtk-calculator

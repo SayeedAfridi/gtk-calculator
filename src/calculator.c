@@ -8,7 +8,7 @@
 int main(int argc, char * argv[]){
     gtk_init (&argc, &argv);
     builder = gtk_builder_new ();
-    if (gtk_builder_add_from_file (builder, "../design/calcDesign.glade", &error) == 0)
+    if (gtk_builder_add_from_file (builder, "/opt/gtk-calculator/design/calcDesign.glade", &error) == 0)
     {
         g_printerr ("Error loading file: %s\n", error->message);
         g_clear_error (&error);
@@ -16,7 +16,7 @@ int main(int argc, char * argv[]){
     }
     
     window = gtk_builder_get_object (builder, "window");
-    gtk_window_set_icon(GTK_WINDOW(window), create_pixbuf("../design/icon.png"));
+    gtk_window_set_icon(GTK_WINDOW(window), create_pixbuf("/opt/gtk-calculator/design/icon.png"));
     g_signal_connect (window, "destroy", G_CALLBACK (gtk_main_quit), NULL);
     zero = gtk_builder_get_object (builder, "zero");
     one = gtk_builder_get_object (builder, "one");
